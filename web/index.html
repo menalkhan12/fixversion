@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IST AI Voice Agent</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://unpkg.com/livekit-client/dist/livekit-client.umd.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <header class="header">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div class="brand-text">
+              <div class="brand-title">IST AI Voice Agent</div>
+              <div class="brand-subtitle">Admissions Helpdesk</div>
+            </div>
+          </div>
+        </header>
+
+        <div class="status" id="status">Ready</div>
+
+        <button id="callBtn" class="call-btn" type="button">
+          Start Call
+        </button>
+
+        <div class="summary">
+          <div class="summary-item">
+            <div class="summary-label">Call Duration</div>
+            <div class="summary-value" id="duration">00:00</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Questions Answered</div>
+            <div class="summary-value" id="qaCount">0</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="chat">
+          <div class="chat-title">Text Test (RAG Validation)</div>
+          <div class="chat-row">
+            <input id="chatInput" class="chat-input" placeholder="Ask about fees, merit criteria, hostels..." />
+            <button id="askBtn" class="ask-btn" type="button">Ask</button>
+          </div>
+          <div id="chatOut" class="chat-out"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
